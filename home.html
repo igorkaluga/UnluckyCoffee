@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://use.typekit.net/vtx6veo.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+        <title>Home</title>
+    </head>
+
+    <body>
+        <div class="nav-menu-div home">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="outstory.html">Our Story</a></li>
+                <li><img id="nav-logo" src="img/Asset 1.png"></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="home-hero">
+            <span id="hero-text">
+                <img id="hero-logo" src="img/288ppi/Asset 5.png" alt="Unlucky Coffee Logo">
+            </span>
+
+            <span id="video-span">
+                <video autoplay="" loop="" muted="">
+                    <source src="img/trimmed-clip.mp4" type="video/mp4" />
+                </video>
+            </span>
+        </div>
+
+        <div class="nav-menu-div sticky" class="">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="outstory.html">Our Story</a></li>
+                <li><img id="nav-logo" src="img/Asset 1.png"></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div id="shopping-div">
+                    <span id="shopping-cart" class="material-icons">shopping_cart</span>
+                    <span id="cart-val">0</span>
+                </div>
+            </ul>
+        </div>
+
+        <div id="our-coffee">
+            <h2>Our Coffee</h2>
+
+            <div class="coffee-grid">
+                <div class="coffee-product">
+                    <img id="home-img-one" src="img/BlackCatBag.png" alt="coffee-img">
+                    <h3><a href="blackcat.html">Black Cat</a></h3>
+                </div>
+
+                <div class="coffee-product">
+                    <img id="home-img-two" src="img/KnockOnWood.png" alt="coffee-img">
+                    <h3><a href="knockonwood.html">Knock On Wood</a></h3>
+                </div>
+
+                <div class="coffee-product">
+                    <img id="home-img-three" src="img/BrokenMirror.png" alt="coffee-img">
+                    <h3><a href="brokenmirror.html">Broken Mirror</a></h3>
+                </div>
+            </div>
+            
+            <p id="coffee-view-more"><a href="/shop.html">View More...</a></p>
+        </div>
+
+        <div id="our-story-home">
+            <div class="about-us-img">
+                <img src="img/roman-bozhko-OXXsAafHDeo-unsplash.jpg">
+            </div>
+            
+            <div class="about-us-text home">
+                <div>
+                    <h2>Our Story</h2>
+                    <p>Unlucky Coffee was started from the love for coffee and a cat. Unlucky coffee is more than just a coffee shop, it's a community. Fair trade and roasted in our own very shop... <a href="outstory.html">Read More</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="location">
+            <h2>Come Visit Us!</h2>
+
+            <div id="location-grid">
+                <div class="location-box">
+                    <div>
+                        <h3>
+                            Hours:
+                        </h3>
+                        <p>Monday-Friday: 6AM - 5PM</p>
+                        <p>Saturday-Sunday: 12-9PM</p>
+                    </div>
+
+                    <div>
+                        <h3>Address:</h3>
+                        <p>7001 E Williams Field Rd, Mesa, AZ 85212</p>
+                    </div>
+
+                    <div>
+                        <h3>Contact</h3>
+                        <p>Email: contact@unluckycoffee.com</p>
+                        <p>Call: 123-456-7890</p>
+                    </div>
+                </div>
+                
+                <!--MAPS-->
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15827.804441791699!2d-111.68792335205956!3d33.304293477542366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872bad9d431dcdf9%3A0x2d9cc1177cc68ed2!2sArizona%20State%20University%20Polytechnic%20Campus!5e0!3m2!1sen!2sus!4v1638058733295!5m2!1sen!2sus" width="100%" height="500px" style="border:none;" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright by &copy; Unlucky Coffee Brand, All Rights Reserved.</p>
+        </footer>
+
+        <script>
+            let windowHeight = document.documentElement.clientHeight;
+
+            let stickyNav = document.querySelectorAll('.nav-menu-div.sticky');
+
+            stickyNav[0].style.display = 'none';
+
+            let scrollFunc = function() {
+                let y = window.scrollY;
+
+                if (y <= windowHeight) {
+                    stickyNav[0].style.display = 'none';
+                } else {
+                    stickyNav[0].style.display = 'initial';
+                    stickyNav[0].style.opacity = '1';
+                    stickyNav[0].style.transition = 'opacity 1s';
+                }
+            };
+
+            window.addEventListener('scroll', scrollFunc);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://use.typekit.net/vtx6veo.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <title>Knock On Wood Roast</title>
+      <style>
+          .product-listing {
+              margin-top: 60px;
+          }
+
+          .view-more {
+              margin-bottom: 60px;
+          }
+
+          .coffee-grid {
+              grid-template-columns: 1fr 1fr;
+              justify-items: center;
+          }
+
+          .product-listing:hover > .product-listing-img.one {
+              background: #80c7df;
+            }
+      </style>
+    </head>
+
+    <body>
+        <div class="nav-menu-div">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="outstory.html">Our Story</a></li>
+                <li><img id="nav-logo" src="img/Asset 1.png" alt="logo image"></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div id="shopping-div">
+                    <span id="shopping-cart" class="material-icons">shopping_cart</span>
+                    <span id="cart-val">0</span>
+                </div>
+            </ul>
+
+        </div>
+
+        <div class="product-listing">
+            <div class="product-listing-img one">
+                <img src="img/KnockOnWood.png" alt="product listing image">
+            </div>
+
+            <div class="product-listing-text">
+                <div>
+                    <h2>Knock On Wood</h2>
+                    <p>Notes: Honey, Woody</p>
+                    <p>Roast: Medium</p>
+                    <p class="about-coffee">Knock on wood roast means to bring good luck. This roast is meant to do just that! With the sweet notes of honey and undertones of wood you are sure to be lucky!</p>
+
+                    <input type="button" class="add-to-crt" value="ADD TO CART">
+                    <p class="cart-add-hidden">Added to cart!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-more">
+            <div id="our-coffee">
+                <h2>Something Else You Might Enjoy</h2>
+    
+                <div class="coffee-grid">
+
+                    <div class="coffee-product">
+                    <img id="home-img-one" src="img/BlackCatBag.png" alt="coffee-img">
+                    <h3><a href="blackcat.html">Black Cat</a></h3>
+                </div>
+    
+                    <div class="coffee-product">
+                        <img id="home-img-three" src="img/BrokenMirror.png" alt="coffee-img">
+                        <h3><a href="brokenmirror.html">Broken Mirror</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright by &copy; Unlucky Coffee Brand, All Rights Reserved.</p>
+        </footer>
+
+        <script>
+            let addBtn = document.querySelectorAll('.add-to-crt');
+            let cartElem = document.getElementById('cart-val').valueOf();
+            let addedCartMsg = document.querySelectorAll('.cart-add-hidden');
+
+            let cartNum = 0;
+
+            let counterAdd = 0;
+
+            for (let i = 0; i < addBtn.length; i++) {
+                addBtn[i].addEventListener('click',  function() {updateCart(this); }, false);
+            };
+
+            for (let i = 0; i < addedCartMsg.length; i++) {
+                addBtn[i].addEventListener('click',  function() {displayMsg(i); }, false);
+            }
+
+            function updateCart() {
+                cartNum += 1;
+                console.log(cartNum);
+                cartElem.innerHTML = cartNum;
+            };
+
+            function displayMsg(i) {
+                counterAdd += 1;
+                console.log(counterAdd);
+                addedCartMsg[i].innerHTML = counterAdd + ' added to cart';
+                addedCartMsg[i].style.display = 'block';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://use.typekit.net/vtx6veo.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <title>Contact</title>
+
+      <style>
+          .location-box {
+              min-height: 200px;
+              padding-bottom: 60px;
+          }
+      </style>
+    </head>
+
+    <body>
+        <div class="nav-menu-div">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="outstory.html">Our Story</a></li>
+                <li><img id="nav-logo" src="img/Asset 1.png"></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div id="shopping-div">
+                    <span id="shopping-cart" class="material-icons">shopping_cart</span>
+                    <span id="cart-val">0</span>
+                </div>
+            </ul>
+        </div>
+
+        <div id="contact-us-div">
+
+            <h1>Contact Us!</h1>
+
+            <div class="contact-us-text">
+                <div>
+                    <h2>Lets get in touch</h2>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto officia corrupti possimus iure quos. Dolores reiciendis laboriosam iste ratione minus? Temporibus, voluptatum beatae debitis esse magni consequatur officia et veniam.</p>
+                </div>
+            </div>
+
+            <div class="contact-us-form">
+                <form id="submit-form">
+                    <div class="label-box">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                    </div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="contactEmail" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="contactMessage"></textarea>
+
+                    <input id="form-submit" type="button" value="Submit" onclick="formMessage()">
+                </form>
+
+                <div id="contact-message">
+                    <p>Thank you for contacting us!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-box">
+            <div>
+                <h3>
+                    Hours:
+                </h3>
+                <p>Monday-Friday: 6AM - 5PM</p>
+                <p>Saturday-Sunday: 12-9PM</p>
+            </div>
+
+            <div>
+                <h3>Address:</h3>
+                <p>7001 E Williams Field Rd, Mesa, AZ 85212</p>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@unluckycoffee.com</p>
+                <p>Call: 123-456-7890</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright by &copy; Unlucky Coffee Brand, All Rights Reserved.</p>
+        </footer>
+    </body>
+
+    <script>
+        let submitBtn = document.getElementById('form-submit');
+
+        let formHide = document.getElementById('submit-form');
+
+        let contactMsg = document.getElementById('contact-message');
+
+        submitBtn.addEventListener('click', function() {
+            formHide.style.display = 'none';
+            contactMsg.style.display = 'block';
+        });
+
+        function formMessage() {
+            let formName = document.getElementById('name').value;
+            contactMsg.innerHTML = "Thank you for contacting us, " + formName + "!";
+        }
+    </script>
+</html>
