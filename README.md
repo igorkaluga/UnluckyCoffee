@@ -1,1 +1,3 @@
-Test file
+A coffee shop website.
+
+Will add more later...
